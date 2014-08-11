@@ -53,7 +53,7 @@ for feat in data['features']:
 
     # create a TrainStatus entry
     ts = TrainStatus(
-        trainId = tr.fid,
+        train = tr,
         velocity = float(props['Velocity']) if props.has_key('Velocity') and props['Velocity'] != '' else None,
         status = props['TrainState'],
         retrieved = datetime.now(),
