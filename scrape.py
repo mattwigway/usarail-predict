@@ -35,7 +35,7 @@ for feat in data['features']:
         )
         sess.add(rt)
 
-    rawDate = props['OrigSchDep'][:10].strip().split('/')
+    rawDate = props['OrigSchDep'].split(' ')[0].split('/')
     depDate = date(int(rawDate[2]), int(rawDate[0]), int(rawDate[1]))
 
     # find the appropriate train
