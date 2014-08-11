@@ -94,7 +94,7 @@ for feat in data['features']:
             estDep = rawss['estdep'] if rawss.has_key('estdep') else None,
             actArr = rawss['postarr'] if rawss.has_key('postarr') else None,
             actDep = rawss['postdep'] if rawss.has_key('postdep') else None,
-            trainStatusId = ts.fid,
+            trainStatus = ts,
             stationId = rawss['code']
         )
         sess.add(ss)
