@@ -31,7 +31,7 @@ for feat in data['features']:
     if rt == None:
         rt = Route(
             number = props['TrainNum'],
-            name = props['RouteName']
+            name = props['RouteName'] if props.has_key('RouteName') else None
         )
         sess.add(rt)
 
